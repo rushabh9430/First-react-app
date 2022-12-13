@@ -11,7 +11,9 @@ function App() {
         this.city = city;
       }
       popUp() {
-        console.log(`name is a ${this.name} and Id And City is ${this.id}, ${this.city}`);
+        console.log(
+          `name is a ${this.name} and Id And City is ${this.id}, ${this.city}`
+        );
       }
     }
     class Profecer extends Student {
@@ -21,6 +23,24 @@ function App() {
     }
     var details = new Profecer("rushabh", 50, "Kolkata");
     details.popUp();
+
+    // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    class Employee {
+      constructor(givenName, givenExperience, givenDivision) {
+        this.name = givenName;
+        this.experience = givenExperience;
+        this.division = givenDivision;
+      }
+      slogan() {
+      console.info(`My name is ${this.name} and I worked in this Company atleast ${this.experience} year !`)
+      }
+      // Object
+    }
+    let data = new Employee("ramesh", 26, "Division");
+    data.slogan();
+
+    // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   }
   return (
     <div className="App">
@@ -35,5 +55,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
