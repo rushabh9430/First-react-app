@@ -26,6 +26,22 @@ function App() {
 
     // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+    // class Employee {
+    //   constructor(givenName, givenExperience, givenDivision) {
+    //     this.name = givenName;
+    //     this.experience = givenExperience;
+    //     this.division = givenDivision;
+    //   }
+    //   slogan() {
+    //   console.info(`My name is ${this.name} and I worked in this Company atleast ${this.experience} year !`)
+    //   }
+    //   // Object
+    // }
+    // let data = new Employee("ramesh", 26, "Division");
+    // data.slogan();
+
+    // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
     class Employee {
       constructor(givenName, givenExperience, givenDivision) {
         this.name = givenName;
@@ -33,15 +49,22 @@ function App() {
         this.division = givenDivision;
       }
       slogan() {
-      console.info(`My name is ${this.name} and I worked in this Company atleast ${this.experience} year !`)
+      console.info(`My name is ${this.name} and I worked in this Company atleast ${this.experience} year ! And Language is a  ${this.Language} and githube instractions ${this.github}`)
       }
-      // Object
     }
-    let data = new Employee("ramesh", 26, "Division");
-    data.slogan();
+    class Programmer extends Employee{
+      constructor(givenName,givenExperience,givenDivision,Language,github){
+        super(givenName, givenExperience, givenDivision)
+        this.Language = Language 
+        this.github = github 
 
-    // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+      }
+    }
+    let measure = new Programmer("ramesh", 26, "Division","English","git repository");
+    console.log(measure);
+    measure.slogan();
   }
+  
   return (
     <div className="App">
       header
