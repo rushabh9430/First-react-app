@@ -68,11 +68,11 @@ function App() {
                 )
               })
             } 
-             <h2>How to Filter value only even values has been saw</h2>
+             {/* <h2>How to Filter value only even values has been saw</h2> */}
             {
               data3.filter((i)=> i.id %2==0 ) .map((i)=> {
                 return (
-                  <tr key={Math.random()}>
+                  <tr key={Math.random()}> 
                     <td>{i.name}</td>
                     <td>{i.email}</td>
                     <td>{i.age}</td>
