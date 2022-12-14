@@ -1,0 +1,9 @@
+[
+  { "name": "Ram", "email": "ram@gmail.com", "age": 23, "id" : 1 },
+  { "name": "Shyam", "email": "shyam23@gmail.com", "age": 28 , "id" : 2},
+  { "name": "John", "email": "john@gmail.com", "age": 33, "id" : 3 },
+  { "name": "Bob", "email": "bob32@gmail.com", "age": 41, "id" : 4 },
+  { "name": "Pop", "email": "popxyx@gmail.com", "age": 41, "id" : 5 },
+  { "name": "mom", "email": "mom121@gmail.com", "age": 41, "id" : 6 },
+  { "name": "tom", "email": "tom123@gmail.com", "age": 41, "id" : 7 }
+]
