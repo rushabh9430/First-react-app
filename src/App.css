@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.d-flex{
+  display: flex;
+}
+table{
+  margin: 15px;
+}
+th{
+  color: aliceblue;
+  background-color: black;
+}
