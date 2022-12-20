@@ -1,16 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+//   New Including File ⬇️
+import Header from './Components/header.js'
 
+//  Props Hamesh key and value na format ma j pass thashe ! 
+//  1st step Component ma props Pass karo and components ma get karo 
 function App() {
+
+  const Student = {
+    name : "Rushabh Sutariya",
+    id : 1054
+  }
+
+  const Profecer = {
+    name : "Abhishekh Gajera",
+    id : 1
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code>
-        </p>
-        <p>This is a default react app</p>
-      </header>
+      {/* Pass velue */}
+      <Header  Student = {Student} Profecer = {Profecer} />
     </div>
   );
 }
