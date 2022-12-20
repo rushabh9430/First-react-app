@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 //   New Including File ⬇️
-import Header from './Components/header.js'
+import Header from "./Components/header.js";
+//   New Including File ⬇️
+import About from "./Components/about.js";
 
-//  Props Hamesh key and value na format ma j pass thashe ! 
-//  1st step Component ma props Pass karo and components ma get karo 
+// Note  :  Add New components File Is About
 function App() {
-
   const Student = {
-    name : "Rushabh Sutariya",
-    id : 1054
-  }
+    name: "Rushabh Sutariya",
+    id: 1054,
+  };
 
   const Profecer = {
-    name : "Abhishekh Gajera",
-    id : 1
-  }
+    name: "Abhishekh Gajera",
+    id: 1,
+  };
+
+  const Medicine = {
+    name: "Painkillers",
+  };
+  //  How to access boolean value
   return (
     <div className="App">
       {/* Pass velue */}
-      <Header  Student = {Student} Profecer = {Profecer} />
+      <Header Student={Student} Profecer={Profecer} />
+      <About Drug={Medicine} isValid = {true}/>
     </div>
   );
 }
