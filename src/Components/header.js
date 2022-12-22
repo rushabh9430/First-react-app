@@ -1,23 +1,15 @@
 
 //  🔯 First Method  ⬇️ Without using Props
 import React from 'react'
+import Contact from './Contact'
 
-// function header({Student , Profecer}) {
-//   return (
-//     <div>
-//       This is a header And Student name is <b>{Student.name}</b> <br />
-//       And Class Profecer is <b>{Profecer.name}</b>
-//     </div>
-//   )
-// }
-
-//  🔯 First Method  Use Props  ⬇️
-
+//  🔯 How to access Header Components Value in Contact Components⬇️
 function header(props) {
+        // console.log(props.Student)
         return(
                 <div>
-                        This is a name {props.Student.name} <br />
-                        And Profecer Name is  {props.Profecer.name}
+                        <Contact value = {props.Student}  />
+                        <h1> Header File : 1St Object Name is {props.Student[1].name}</h1>
                 </div>
         )
 }
