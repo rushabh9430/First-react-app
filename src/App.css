@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+/*  Custom CSS */
+
+body {
+        font-family: ibm plex sans;
+}
+
+.btn_css{
+        padding: 10px 8px;
+        background-color: #282c34;
+        color: #fff;
+}
+
+button {
+        font-family: ibm plex sans;
+}
