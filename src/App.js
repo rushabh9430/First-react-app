@@ -1,61 +1,54 @@
-import "./App.css";
-const data = [
-  {
-    name: "Rushabh",
-    surname: "Sutariya",
-    id: 1,
-    age: 26
-  },
-  {
-    name: "Piyush",
-    surname: "Vaghasiya",
-    id: 2,
-    age: 16
-  },
-  {
-    name: "Manoj",
-    surname: "Savani",
-    id: 3,
-    age: 26
-  },
-  {
-    name : "Panu",
-    surname :"chikni",
-    id : 4,
-    age : 28
-  }
-];
-function App() {
-//   let filter = data.filter((i) => i.name.length<7);
+import React from "react";
+import { useState ,useEffect} from "react";
 
+// 📝Note : jyare tamre page reload thai and changes karvo hoi tyare useEffect no use thai chhe Bassicly te sadi rite pan SetName no use kari ne pan tahi to tene Function onclick ma farjiyat levu pade like last ma batavel chhe
+
+// [] => Empty dependency
+// birth of component => Mounting
+
+// ⚛️ 1.Mounting Dom reload thai ne Action run thai
+
+export default function App() {
+    const [name, setName] = useState("adam")
+    useEffect(() => {
+        setName("Pravin")
+    }, [])
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <table border={1}>
-        <tbody>
-          <tr>
-            <th colSpan={4}>DATA</th>
-          </tr>
-          <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Id</th>
-            <th>Age</th>
-          </tr>
-          {/* {data.filter((i)=>  i.name.length > 3).map((i) => { */}
-          {filter.map ( (i) => {
-            return (
-              <tr>
-                <td>{i.name}</td>
-                <td>{i.surname}</td>
-                <td>{i.id}</td>
-                <td>{i.age}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+    <div>
+         name is {name}
     </div>
-  );
+  )
 }
-export default App;
+
+
+// ⚛️2.Updating
+// export default function App() {
+//   const [name, setName] = useState("Rushabh");
+//     useEffect(() => {
+//     }, [name])
+//   return (
+//     <div>
+//         name is {name}
+//       <button onClick={()=>setName("Krunal")}>Update</button>
+//     </div>
+//   );
+// }
+
+// ⚛️ 3.unMounting => screen remove 
+// export default function App() {
+
+//   useEffect(() => {
+  
+//     return () => {
+//         alert("You want to exit this tab !")
+//     }
+//   }, [])
+//   return (
+//     <div>
+      
+//     </div>
+//   )
+// }
+
+
+// s

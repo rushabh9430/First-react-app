@@ -3,6 +3,8 @@
 // import React from 'react'
 // import Contact from './Contact'
 
+import App from "../App"
+
 // //  🔯 How to access Header Components Value in Contact Components⬇️
 // function header(props) {
 //         // console.log(props.Student)
@@ -15,6 +17,8 @@
 // }
 
 // export default header
+
+
 
 
 
