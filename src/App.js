@@ -8,17 +8,17 @@ import { useState ,useEffect} from "react";
 
 // ⚛️ 1.Mounting Dom reload thai ne Action run thai
 
-export default function App() {
-    const [name, setName] = useState("adam")
-    useEffect(() => {
-        setName("Pravin")
-    }, [])
-  return (
-    <div>
-         name is {name}
-    </div>
-  )
-}
+// export default function App() {
+//     const [name, setName] = useState("adam")
+//     useEffect(() => {
+//         setName("Pravin")
+//     }, [])
+//   return (
+//     <div>
+//          name is {name}
+//     </div>
+//   )
+// }
 
 
 // ⚛️2.Updating
@@ -51,4 +51,14 @@ export default function App() {
 // }
 
 
-// s
+// Avi rite na thai etle apde tene oclick par levu pade button par function muki click kari ne change thai did you Understood bro rushabh!
+export default function App() {
+const [name, setName] = useState("adam")
+
+ setName("Pravin")
+  return (
+    <div>
+         name is {name}
+    </div>
+  )
+}
