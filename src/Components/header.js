@@ -1,24 +1,8 @@
-
-//  🔯 First Method  ⬇️ Without using Props
-// import React from 'react'
-// import Contact from './Contact'
-
-import App from "../App"
-
-// //  🔯 How to access Header Components Value in Contact Components⬇️
-// function header(props) {
-//         // console.log(props.Student)
-//         return(
-//                 <div>
-//                         <Contact value = {props.Student}  />
-//                         <h1> Header File : 1St Object Name is {props.Student[1].name}</h1>
-//                 </div>
-//         )
-// }
-
-// export default header
-
-
-
-
-
+// ⚛️ ye code lifecycle_classBaseComponents k liye hai 
+function App(){
+    return<div className="App">
+        My name is charli
+        
+    </div>
+}
+export default App;

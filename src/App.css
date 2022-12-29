@@ -40,15 +40,16 @@
 /*  Custom CSS */
 
 body {
-        font-family: ibm plex sans;
+  /* font-family: ibm plex sans; */
+  font-family: cascadia code;
 }
 
-.btn_css{
-        padding: 10px 8px;
-        background-color: #282c34;
-        color: #fff;
+.btn_css {
+  padding: 10px 8px;
+  background-color: #282c34;
+  color: #fff;
 }
 
 button {
-        font-family: ibm plex sans;
+  font-family: ibm plex sans;
 }

@@ -1,40 +1,28 @@
 import React, { Component } from "react";
-
 export default class App extends Component {
   componentWillMount() {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ name: (this.state.name = "Pravin Mavani") });
   }
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      name: "Rushabh Sutariya",
+      name: "rushabh sutariya",
       count: 1,
     };
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    console.info("ComponentDidUpdate");
-    if (prevState.count !== this.state.count) {
-      this.setState({ name : "Pravin Sutariya" });
-    }
-  }
-
-//   componentWillUnmount() {
-//     alert("ComponentWillUnmout => PageLeave");
-//   }
-
-  onClickHandler = () => {
-    this.setState({ count: this.state.count + 1 });
+  onclickHandler = () => {
+    this.setState({ name: (this.state.name = "Manish Bhavani") });
   };
 
   render() {
     return (
-      <div>
-        name is {this.state.name}
-        <br />
-        Count {this.state.count}
-        <button onClick={this.onClickHandler}>Click Me</button>
+      <div className="App">
+        <button onClick={this.onclickHandler}>Click on Me</button>
+        Name is {this.state.name}
       </div>
     );
   }
 }
+
+// ! Note : setState ne class components in under import karava ni jarur nathi kem ke ahiya Apde react mathi component ne import karaviyu chhe etle ema badhu include j chhe like componentWillMount bhi  and componentDidUpdate And componentWillUnmount
