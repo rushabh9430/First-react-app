@@ -1,28 +1,72 @@
-import React, { Component } from "react";
+//  ! Method - 1 => how to work componentDidUpdate with states
+// import React, { Component ,setState } from "react";
+// export default class App extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       name: "rushabh sutariya",
+//       count: 2
+//     };
+//   }
+
+// //   * How to work in state
+//   componentDidUpdate(prevProps , prevState ) {
+//     if(prevState.count !== this.state.count)
+//     {
+//         this.setState({name : "pravin"})
+//     }
+//   }
+
+//   onclickHandler = () => {
+//     this.setState({count : this.state.count + 1})
+//   };
+
+//   render() {
+//     return (
+//       <div className="App">
+//         count {this.state.count}
+//         <button onClick={this.onclickHandler}>onclick</button>
+//       </div>
+//     );
+//   }
+// }
+
+//  ! Method - 2 => how to work componentDidUpdate with props
+import React, { Component, setState } from "react";
+
 export default class App extends Component {
-  componentWillMount() {
-    this.setState({ name: (this.state.name = "Pravin Mavani") });
-  }
   constructor() {
     super();
     this.state = {
       name: "rushabh sutariya",
       count: 1,
+      isValid: true,
     };
   }
 
   onclickHandler = () => {
-    this.setState({ name: (this.state.name = "Manish Bhavani") });
+    this.setState({ count: this.state.count + 1 });
   };
-
   render() {
     return (
       <div className="App">
-        <button onClick={this.onclickHandler}>Click on Me</button>
-        Name is {this.state.name}
+        name is {this.state.name}
+        <Title component1 = {this.state.count}/>
+        <button onClick={this.onclickHandler}>submit</button>
       </div>
     );
   }
 }
 
-// ! Note : setState ne class components in under import karava ni jarur nathi kem ke ahiya Apde react mathi component ne import karaviyu chhe etle ema badhu include j chhe like componentWillMount bhi  and componentDidUpdate And componentWillUnmount
+class Title extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps !== this.props.count) {
+      console.log("componentDidUpdate");
+    }
+  }
+  render() {
+    return <div className="Title">
+        count are {this.props.component1}
+        </div>;
+  }
+}
