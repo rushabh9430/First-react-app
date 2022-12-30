@@ -1,35 +1,35 @@
-import React , { Component , setState } from 'react'
-export default class App extends Component {
+import React , { useState } from 'react'
 
-    constructor(){
-        super()
-        this.state = {
-            isvalid : true
-        }
-    }
-    clickme = () => {
-        this.setState({isvalid : !this.state.isvalid}) 
-    }
-    render(){
-
-        return(
-            <div>
-                isvalid{this.state.isvalid ? 'yes' : "no"}
-                {this.state.isvalid && <Home />}
-                <button onClick={this.clickme}>submit</button>
-            </div>
-        )
-    }
+export default function App() {
+  return (
+    <div >
+      <HOC component={Counter} />
+      <Counter />
+    </div>
+  )
 }
 
-class Home extends Component{
+const HOC = (props) => {
+    return(
+        <div style={{backgroundColor : 'red' , padding : 25 }}>
+            <props.component />
+        </div>
+    )
+}
 
-    componentWillUnmount(){
-        alert("are you sure exit this page ?")
+
+
+const Counter = () => {
+
+    const [count, setcount] = useState(0)
+
+    const onclickHandler = () => {
+        setcount(count + 1)
     }
-    render(){
-        return(
-            <div>Home</div>
-        )
-    }
+    return(
+        <div>
+            count is {count}
+            <button onClick={onclickHandler}>button</button>
+        </div>
+    )
 }
