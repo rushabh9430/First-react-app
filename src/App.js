@@ -1,4 +1,7 @@
 import React from "react";
+// react - rounter - dom is external package so first you install 
+// command is => npm i react-router-dom
+// and rap out < BrowserRouter> <App /> <BrowserRouter /> in index.js  
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/about";
