@@ -1,23 +1,13 @@
-import React, { Component } from "react";
+import  { Timer1 , Timer } from "./Components/Home";
 
-
-export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-    }
-  }
-
-  componentDidMount(){
-    setInterval(() => {
-        this.setState({data : new Date().toLocaleTimeString()})
-    }, 1000);
-  }
-  render() {
-    return (
-      <div className="App">
-        {this.state.data}
-      </div>
-    );
-  }
+function App () {
+    return(
+        <div className="d-flex">
+            <Timer />
+            <Timer1 /> 
+            
+        </div>
+    )
 }
+
+export default App ;
