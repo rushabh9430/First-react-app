@@ -1,48 +1,32 @@
-// Function Base Componets to clock
-import { useState  , useEffect } from "react" 
-import React, { Component } from "react";
-export  function clock1 () {
-    const [clock, setclock] = useState(null)
-    useEffect(() => {
-        setInterval(() => {
-            setclock(
-                new Date().toLocaleTimeString()
-            )
-        }, 1000);
-    }, [])
-
+const data = {
+  name: "riyush",
+};
+function Home(props) {
+  return (
+    <div>
+      name is {data.name} and parents object name is {props.data2[0].firstName}
+      <table border={1}>
+        <tbody>
+            <tr>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>Age</th>
+            </tr>
+            {
+                props.data2.filter((i)=> i.age > 25).map( (i) => {
+                    return(
+                        <tr key={Math.random()}>
+                            <td>{i.firstName}</td>
+                            <td>{i.lastName}</td>
+                            <td>{i.age}</td>
+                        </tr>
+                    )
+                })
+            }
+        </tbody>
+      </table>
+    </div>
     
-    return(
-        <div>
-            Function base clock
-            <div style={{color: "green" , backgroundColor:"gray"}}>
-            <h1>{clock}</h1>
-            </div>
-        </div>
-    )
+  );
 }
-
-// class Base Componets to clock
-
-export class clock extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
-  componentDidMount() {
-    setInterval(() => {
-      this.setState({ data: new Date().toLocaleTimeString() });
-    }, 1000);
-  }
-  render() {
-    return (
-      <div>
-        Class base clock
-        <div style={{color:"red" , backgroundColor:"olive"}}>
-            <h1>{this.state.data}</h1>
-        </div>
-      </div>
-    );
-  }
-}
+export default Home;
