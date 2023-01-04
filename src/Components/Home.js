@@ -1,11 +1,11 @@
-// Function Base Componets to Timer
-import { useState  , useEffect } from "react"
+// Function Base Componets to clock
+import { useState  , useEffect } from "react" 
 import React, { Component } from "react";
-export  function Timer1 () {
-    const [timer, setTimer] = useState(null)
+export  function clock1 () {
+    const [clock, setclock] = useState(null)
     useEffect(() => {
         setInterval(() => {
-            setTimer(
+            setclock(
                 new Date().toLocaleTimeString()
             )
         }, 1000);
@@ -14,17 +14,17 @@ export  function Timer1 () {
     
     return(
         <div>
-            Function base Timer
+            Function base clock
             <div style={{color: "green" , backgroundColor:"gray"}}>
-            <h1>{timer}</h1>
+            <h1>{clock}</h1>
             </div>
         </div>
     )
 }
 
-// class Base Componets to Timer
+// class Base Componets to clock
 
-export class Timer extends Component {
+export class clock extends Component {
   constructor() {
     super();
     this.state = {};
@@ -38,7 +38,7 @@ export class Timer extends Component {
   render() {
     return (
       <div>
-        Class base Timer
+        Class base clock
         <div style={{color:"red" , backgroundColor:"olive"}}>
             <h1>{this.state.data}</h1>
         </div>

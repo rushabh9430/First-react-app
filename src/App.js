@@ -1,13 +1,29 @@
-import  { Timer1 , Timer } from "./Components/Home";
+import React from "react";
+import { useEffect , useState} from 'react'
+import "./App.css";
+function App() {
+  const [count, setcount] = useState(0);
 
-function App () {
-    return(
-        <div className="d-flex">
-            <Timer />
-            <Timer1 /> 
-            
-        </div>
+  useEffect(() => {
+    
+  }, [])
+
+  let increment = () => {
+    setcount(
+         count + 1
     )
+  }
+  let decrement = () => {
+    setcount(
+         count - 1
+    )
+  }
+  return (
+    <div className="App">
+      <button onClick={decrement}>decrement</button>
+      {count}
+      <button onClick={increment}>increment + </button>
+    </div>
+  );
 }
-
-export default App ;
+export default App;
